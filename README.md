@@ -15,7 +15,7 @@ OCI Visualizer is a tool to visualize an OCI tenancy primarily from a network pe
 Both the extraction script and the web app run on top of python <a href="http://flask.pocoo.org/">Flask</a>
 
 
-![Alt text](/visualizer.png?raw=true "OCI Visualizer")   /visualizer.png
+![Alt text](./visualizer.png?raw=true "OCI Visualizer")   /visualizer.png
 
 <b> installation </b>
 
