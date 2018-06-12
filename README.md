@@ -4,10 +4,11 @@ Oracle Cloud Infrstructure  Visualization Tool
 # OCI Visualizer
 
 <b>Overview</b>
-OCI Visualizer is a tool to visualize an OCI tenancy primarily from a network perpective. The tool was created mainly for the purpose of better understanding the OCI network model and the APIs behind it.
 
-<b>How the visualizer works?</b>
-- First it extracts the network data for all VCNs and other cloud resources in an OCI compartment and generates  a json data structure     that describes the various cloud resources  in that compartment . This is done using a Python script leveraging the OCI  Python SDK .
+OCI Visualizer is a tool to visualize an OCI tenancy primarily from a network perspective. The tool was created mainly for the purpose of better understanding the OCI network model. As as a great believer in API first and visualization, I thought that the best way to learn a product is  to use the APIs to build a visulation tool.
+
+<b>How it works?</b>
+- First visualizer extracts the network data for all VCNs and other cloud resources in an OCI compartment and generates  a json data structure . This is done using a Python script leveraging the OCI  Python SDK and exposed as a flask REST service.
 
 - Visualize the data generated in step 1 using a small web app, leveraging  <a href="http://js.cytoscape.org/">cystoscape.js</a> , an open source graph visualization framework. 
 
@@ -55,9 +56,9 @@ Both the extraction script and the web app run on top of python <a href="http://
 7. <b>Launch the visualizer UI</b>
 	- Point your browser to  http://localhost:8000/ociviz.html . 
 	- You can use http request parameters to control how Visualizer is launched. the following parameters are available
-		- 'proxy' - if you're behind a firewall and need to use a proxy:
-		- 'profile' - By default, Visualizer will use the DEFAULT profile on your config file. If you want to use a different profile then provide a profile
-		  parameter in the request url.
+		- <b>'proxy' </b>- if you're behind a firewall and need to use a proxy:
+		- 'profile' - By default, Visualizer will use the DEFAULT profile on your config file. If you want to use a different
+		   profile then provide a profile parameter in the request url.
 		
 		- <b>'mode'</b> - 
 			 <b>'REST'</b>: this is thhe default mode. in this mode the netwrok data is retrieved in real time by calling the Python SDK.
