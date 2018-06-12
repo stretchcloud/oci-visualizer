@@ -14,6 +14,9 @@ OCI Visualizer is a tool to visualize an OCI tenancy primarily from a network pe
 
 Both the extraction script and the web app run on top of python <a href="http://flask.pocoo.org/">Flask</a>
 
+
+![alt text](https://raw.githubusercontent.com/mbenolie/oci-visualizer/master/visualizer.png
+
 <b> installation </b>
 
 1. <b>Install OCI Python SDK as described <a href="https://oracle-cloud-infrastructure-python-sdk.readthedocs.io/en/latest/">here</a> </b>
@@ -69,8 +72,8 @@ Both the extraction script and the web app run on top of python <a href="http://
 			   be launched with mode=OFFLINE and will  visualize the content of the file 'network.json' 
 			   in the static directory. 
 			   
-			 <b>'FILE'</b> : to generate a file that can be viewed OFFLINE. The network file will be generated in the static folder with name
-			    "network_<compartmentname>.json"		
+			 <b>'FILE'</b> : to generate a file that can be viewed OFFLINE. The network file will be generated 
+			     in the static folder with name "network_<compartmentname>.json"		
 		- <b>'compartment'</b> - When Visualizer is launched, it will retrieve all compartments in the tenancy 
 		     defined by your profile.
 		     if you want to visualize a spcific compartment then use the compartment request parameter.
