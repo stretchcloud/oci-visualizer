@@ -57,16 +57,22 @@ Both the extraction script and the web app run on top of python <a href="http://
 	- Point your browser to  http://localhost:8000/ociviz.html . 
 	- You can use http request parameters to control how Visualizer is launched. the following parameters are available
 		- <b>'proxy' </b>- if you're behind a firewall and need to use a proxy:
-		- 'profile' - By default, Visualizer will use the DEFAULT profile on your config file. If you want to use a different
-		   profile then provide a profile parameter in the request url.
+		- <b>'profile'</b> - By default, Visualizer will use the DEFAULT profile on your config file. If you want
+		   to use a different  profile then provide a profile parameter in the request url.
 		
 		- <b>'mode'</b> - 
-			 <b>'REST'</b>: this is thhe default mode. in this mode the netwrok data is retrieved in real time by calling the Python SDK.
-			 <b>'OFFLINE' </b>: Sometimes a user may not have access the OCI APIs. In such case the tool can be launched with mode=OFFLINE and will 
-			 vislaize the content of the file 'network.json' in the static directory. 
-			 <b>'FILE' </b> : to generate a file that can be viewed OFFLINE. The network file will be generated in the static folder with name
+		
+			 <b>'REST'</b>: this is thhe default mode. in this mode the netwrok data is retrieved in real time 
+			 by calling the Python SDK.
+			 
+			 <b>'OFFLINE' </b>: Sometimes a user may not have access the OCI APIs. In such case the tool can 
+			   be launched with mode=OFFLINE and will  visualize the content of the file 'network.json' 
+			   in the static directory. 
+			   
+			 <b>'FILE'</b> : to generate a file that can be viewed OFFLINE. The network file will be generated in the static folder with name
 			    "network_<compartmentname>.json"		
-		- <b>'compartment'</b> - When Visualizer is launched, it will retrieve all compartments in the tenancy defined by your profil
+		- <b>'compartment'</b> - When Visualizer is launched, it will retrieve all compartments in the tenancy 
+		     defined by your profile.
 		     if you want to visualize a spcific compartment then use the compartment request parameter.
 	
 		example: http://localhost:8000/ociviz.html?proxy=<proxy url>&profile=<your profile>&cpmpartment=<your compartament name>
